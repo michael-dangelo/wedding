@@ -200,6 +200,24 @@ main {
   opacity: 0.85;
 }
 
+.details__directions {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--wine);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 180ms ease;
+}
+
+.details__directions:hover {
+  border-bottom-color: rgba(106, 45, 62, 0.4);
+}
+
 .details__section--cta {
   display: flex;
   flex-direction: column;
@@ -227,14 +245,11 @@ main {
   text-transform: uppercase;
   cursor: pointer;
   transition:
-    transform 160ms ease-out,
     box-shadow 160ms ease-out,
     background 160ms ease-out,
-    border-color 160ms ease-out;
 }
 
 .details__rsvp:hover {
-  transform: translateY(-1px);
   box-shadow:
     0 10px 20px rgba(0, 0, 0, 0.08),
     0 0 0 1px rgba(106, 45, 62, 0.22);
@@ -260,3 +275,42 @@ main {
   text-transform: uppercase;
   color: var(--sage);
 }
+
+/* ---- Light motion: hero stagger on load ---- */
+.hero__preamble {
+  animation: fade-up 0.42s ease-out 0.08s both;
+}
+.hero__ornament {
+  animation: fade-up 0.42s ease-out 0.18s both;
+}
+.hero__names {
+  animation: fade-up 0.42s ease-out 0.28s both;
+}
+.hero__date-divider {
+  animation: fade-up 0.38s ease-out 0.38s both;
+}
+.hero__date {
+  animation: fade-up 0.42s ease-out 0.5s both;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---- Detail cards: stagger in after hero ---- */
+.details__section {
+  opacity: 0;
+  animation: fade-up 0.42s ease-out both;
+}
+.details__section:nth-child(1) { animation-delay: 0.85s; }
+.details__section:nth-child(2) { animation-delay: 1s; }
+.details__section:nth-child(3) { animation-delay: 1.15s; }
+.details__section:nth-child(4) { animation-delay: 1.3s; }
+.details__section:nth-child(5) { animation-delay: 1.45s; }
