@@ -166,6 +166,30 @@ main {
   text-transform: uppercase;
 }
 
+.hero__location {
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(1.4rem, 4.6vw, 2rem);
+  color: var(--wine);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-top: 0.9rem;
+}
+
+.hero__location-subline {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: var(--ink);
+  letter-spacing: 0.08em;
+  text-transform: none;
+  margin-top: 0.35rem;
+}
+
+.hero__location-link {
+  margin-top: 0.9rem;
+}
+
 .details {
   max-width: 560px;
   width: 100%;
@@ -176,12 +200,10 @@ main {
 }
 
 .details__section {
-  padding: 1.25rem 1.2rem 1.4rem;
-  border-radius: 14px;
-  background: rgba(253, 248, 245, 0.7);
-  box-shadow:
-    0 14px 35px rgba(0, 0, 0, 0.03),
-    0 0 0 1px rgba(106, 45, 62, 0.06);
+  padding: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
 }
 
 .details__heading {
@@ -223,6 +245,10 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 0.75rem;
+  padding: 0;
+  background: none;
+  box-shadow: none;
+  margin-bottom: 1.75rem;
 }
 
 .details__rsvp {
@@ -291,6 +317,18 @@ main {
 }
 .hero__date {
   animation: fade-up 0.42s ease-out 0.5s both;
+}
+
+.hero__location {
+  animation: fade-up 0.42s ease-out 0.58s both;
+}
+
+.hero__location-subline {
+  animation: fade-up 0.42s ease-out 0.64s both;
+}
+
+.hero__location-link {
+  animation: fade-up 0.42s ease-out 0.72s both;
 }
 
 @keyframes fade-up {
