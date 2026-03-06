@@ -47,10 +47,11 @@
 }
 
 :root {
-  --wine:      #6b2d3e;
-  --rose:      #c4848a;
-  --sage:      #7a8c72;
   --cream:     #fdf8f5;
+  --mauve:     #e8d5d8;
+  --rose:      #c4848a;
+  --wine:      #6b2d3e;
+  --sage:      #7a8c72;
   --ink:       #2a1f1f;
 }
 
@@ -131,7 +132,7 @@ main {
 
 .hero__names {
   font-weight: 300;
-  font-size: clamp(3rem, 10vw, 5rem);
+  font-size: clamp(3.5rem, 10vw, 5.5rem);
   letter-spacing: 0.04em;
   color: var(--wine);
   line-height: 1.05;
@@ -144,11 +145,11 @@ main {
   font-size: 0.85em;
 }
 
-.hero__date-divider {
+.hero__divider {
   width: 60%;
   max-width: 260px;
   height: 1px;
-  margin: 1.2rem auto;
+  margin: 2.6rem auto;
   background: linear-gradient(
     to right,
     rgba(106, 45, 62, 0),
@@ -158,26 +159,22 @@ main {
 }
 
 .hero__date {
-  font-style: normal;
   font-weight: 400;
-  font-size: clamp(1.4rem, 4.6vw, 2rem);
+  font-size: clamp(1.6rem, 4.6vw, 2rem);
   color: var(--wine);
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  letter-spacing: 0.11em;
 }
 
 .hero__location {
-  font-style: normal;
   font-weight: 400;
   font-size: clamp(1.4rem, 4.6vw, 2rem);
   color: var(--wine);
-  letter-spacing: 0.14em;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
   margin-top: 0.9rem;
 }
 
 .hero__location-subline {
-  font-style: normal;
   font-weight: 400;
   font-size: 0.95rem;
   color: var(--ink);
@@ -186,14 +183,10 @@ main {
   margin-top: 0.35rem;
 }
 
-.hero__location-link {
-  margin-top: 0.9rem;
-}
-
 .details {
   max-width: 560px;
   width: 100%;
-  margin-top: 2.5rem;
+  margin-top: 1.1rem;
   display: flex;
   flex-direction: column;
   gap: 1.75rem;
@@ -220,24 +213,6 @@ main {
   line-height: 1.6;
   color: var(--ink);
   opacity: 0.85;
-}
-
-.details__directions {
-  display: inline-block;
-  margin-top: 0.75rem;
-  font-family: 'Jost', sans-serif;
-  font-weight: 400;
-  font-size: 0.78rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--wine);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color 180ms ease;
-}
-
-.details__directions:hover {
-  border-bottom-color: rgba(106, 45, 62, 0.4);
 }
 
 .details__section--cta {
@@ -302,7 +277,47 @@ main {
   color: var(--sage);
 }
 
-/* ---- Light motion: hero stagger on load ---- */
+.action-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 0;
+  width: 100%;
+  border-top: 1px solid var(--mauve);
+  border-bottom: 1px solid var(--mauve);
+}
+
+.wedding-btn {
+  flex: 1 1 0%;
+  min-height: 44px;
+  min-width: 0;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--wine);
+  padding: 10px 25px;
+  transition: opacity 0.3s ease;
+  letter-spacing: 0.17em;
+  transition: background-color 0.3s ease;
+}
+
+.wedding-btn:active, .wedding-btn:hover {
+  /* TODO: better than this */
+  background-color: var(--rose);
+}
+
+.rsvp-style {
+  font-weight: 600;
+}
+
+.vertical-divider {
+  width: 1px;
+  height: 35px;
+  background-color: var(--mauve);
+}
+
 .hero__preamble {
   animation: fade-up 0.42s ease-out 0.08s both;
 }
@@ -312,7 +327,7 @@ main {
 .hero__names {
   animation: fade-up 0.42s ease-out 0.28s both;
 }
-.hero__date-divider {
+.hero__divider {
   animation: fade-up 0.38s ease-out 0.38s both;
 }
 .hero__date {
@@ -327,7 +342,7 @@ main {
   animation: fade-up 0.42s ease-out 0.64s both;
 }
 
-.hero__location-link {
+.action-row {
   animation: fade-up 0.42s ease-out 0.72s both;
 }
 
@@ -342,7 +357,6 @@ main {
   }
 }
 
-/* ---- Detail cards: stagger in after hero ---- */
 .details__section {
   opacity: 0;
   animation: fade-up 0.42s ease-out both;
