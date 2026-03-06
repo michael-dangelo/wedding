@@ -50,8 +50,8 @@
   --cream:     #fdf8f5;
   --mauve:     #e8d5d8;
   --rose:      #c4848a;
-  --wine:      #6b2d3e;
-  --sage:      #7a8c72;
+  --wine:      #5c2737;
+  --sage:      #697e5f;
   --ink:       #2a1f1f;
 }
 
@@ -224,48 +224,6 @@ main {
   background: none;
   box-shadow: none;
   margin-bottom: 1.75rem;
-}
-
-.details__rsvp {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.8rem 2.75rem;
-  border-radius: 999px;
-  border: 1px solid rgba(106, 45, 62, 0.28);
-  background: linear-gradient(
-    135deg,
-    rgba(196, 132, 138, 0.06),
-    rgba(106, 45, 62, 0.16)
-  );
-  color: var(--wine);
-  font-family: 'Jost', sans-serif;
-  font-weight: 400;
-  font-size: 0.8rem;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition:
-    box-shadow 160ms ease-out,
-    background 160ms ease-out,
-}
-
-.details__rsvp:hover {
-  box-shadow:
-    0 10px 20px rgba(0, 0, 0, 0.08),
-    0 0 0 1px rgba(106, 45, 62, 0.22);
-  background: linear-gradient(
-    135deg,
-    rgba(196, 132, 138, 0.16),
-    rgba(106, 45, 62, 0.32)
-  );
-}
-
-.details__rsvp:active {
-  transform: translateY(0);
-  box-shadow:
-    0 6px 12px rgba(0, 0, 0, 0.06),
-    0 0 0 1px rgba(106, 45, 62, 0.3);
 }
 
 .details__note {
