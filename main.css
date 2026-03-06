@@ -256,14 +256,31 @@ main {
   text-transform: uppercase;
   color: var(--wine);
   padding: 10px 25px;
-  transition: opacity 0.3s ease;
+  background-color: transparent;
   letter-spacing: 0.17em;
-  transition: background-color 0.3s ease;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.15s ease;
+  cursor: pointer;
 }
 
-.wedding-btn:active, .wedding-btn:hover {
-  /* TODO: better than this */
-  background-color: var(--rose);
+.wedding-btn:hover,
+.wedding-btn:focus-visible {
+  background-color: rgba(232, 213, 216, 0.45); /* soft mauve wash */
+  box-shadow:
+    inset 0 1px 0 rgba(92, 39, 55, 0.18),
+    inset 0 -1px 0 rgba(92, 39, 55, 0.18);
+  color: var(--ink);
+}
+
+.wedding-btn:active {
+  background-color: rgba(196, 132, 138, 0.6); /* slightly deeper rose on press */
+  box-shadow:
+    inset 0 1px 0 rgba(92, 39, 55, 0.3),
+    inset 0 -1px 0 rgba(92, 39, 55, 0.3);
+  transform: translateY(1px);
 }
 
 .rsvp-style {
