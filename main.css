@@ -58,7 +58,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html {
-  font-size: 18px;
+  font-size: 17px;
 }
 
 body {
@@ -255,9 +255,9 @@ main {
   text-decoration: none;
   text-transform: uppercase;
   color: var(--wine);
-  padding: 10px 25px;
+  padding: 10px;
   background-color: transparent;
-  letter-spacing: 0.17em;
+  letter-spacing: 0.15em;
   transition:
     background-color 0.25s ease,
     color 0.25s ease,
