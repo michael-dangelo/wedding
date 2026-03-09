@@ -81,7 +81,7 @@ main {
 
 .hero {
   text-align: center;
-  padding: 2rem 0 2.5rem;
+  padding: 2rem 0 0;
   max-width: 560px;
   width: 100%;
 }
@@ -132,7 +132,7 @@ main {
 
 .hero__names {
   font-weight: 300;
-  font-size: clamp(3.5rem, 10vw, 5.5rem);
+  font-size: 3.5rem;
   letter-spacing: 0.04em;
   color: var(--wine);
   line-height: 1.05;
@@ -160,14 +160,14 @@ main {
 
 .hero__date {
   font-weight: 400;
-  font-size: clamp(1.6rem, 4.6vw, 2rem);
+  font-size: 1.6rem;
   color: var(--wine);
   letter-spacing: 0.11em;
 }
 
 .hero__location {
   font-weight: 400;
-  font-size: clamp(1.4rem, 4.6vw, 2rem);
+  font-size: 1.4rem;
   color: var(--wine);
   letter-spacing: 0.09em;
   text-transform: uppercase;
@@ -181,58 +181,6 @@ main {
   letter-spacing: 0.08em;
   text-transform: none;
   margin-top: 0.35rem;
-}
-
-.details {
-  max-width: 560px;
-  width: 100%;
-  margin-top: 1.1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.75rem;
-}
-
-.details__section {
-  padding: 0;
-  border-radius: 0;
-  background: none;
-  box-shadow: none;
-}
-
-.details__heading {
-  font-weight: 400;
-  font-size: 1.1rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--sage);
-  margin-bottom: 0.5rem;
-}
-
-.details__body {
-  font-size: 1.05rem;
-  line-height: 1.6;
-  color: var(--ink);
-  opacity: 0.85;
-}
-
-.details__section--cta {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0;
-  background: none;
-  box-shadow: none;
-  margin-bottom: 1.75rem;
-}
-
-.details__note {
-  font-family: 'Jost', sans-serif;
-  font-weight: 300;
-  font-size: 0.7rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--sage);
 }
 
 .action-row {
@@ -291,6 +239,81 @@ main {
   width: 1px;
   height: 35px;
   background-color: var(--mauve);
+}
+
+.details {
+  max-width: 560px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.details__heading {
+  font-weight: 400;
+  font-size: 1.2rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 0.5rem;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 20px;
+  display: inline-block;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 23px;
+  top: 1.3rem;
+  bottom: 1.3rem;
+  width: 1px;
+  background-color: var(--mauve);
+  z-index: 1;
+}
+
+.event {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  margin: 0.8rem 0 1.7rem;
+}
+
+.dot {
+  position: relative;
+  margin-top: 7px;
+  width: 7px;
+  height: 7px;
+  background-color: var(--cream);
+  border: 1px solid var(--wine);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.icon-space {
+  margin-right: 15px;
+}
+
+.event-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: var(--ink);
+  text-transform: uppercase;
+}
+
+.event-name {
+  letter-spacing: 0.1rem;
+  color: var(--wine);
+}
+
+.event-time {
+
 }
 
 .hero__preamble {
