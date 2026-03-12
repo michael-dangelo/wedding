@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <title>RSVP &mdash; Irina & Michael</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <link href="main.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="favicon.svg">
+</head>
+<body>
+  <main>
+    <section class="rsvp-page">
+      <nav class="rsvp-nav">
+        <a href="index.html" class="rsvp-back-link" aria-label="Back to main invitation">
+          ← Back
+        </a>
+      </nav>
+
+      <header class="rsvp-header">
+        <div class="hero__ornament">
+          <div class="hero__rule">
+            <span></span>
+            <span></span>
+          </div>
+          <span class="hero__fleuron">❦</span>
+          <div class="hero__rule">
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <h1 class="rsvp-title">
+          RSVP
+        </h1>
+      </header>
+
+      <form
+        name="rsvp"
+        method="POST"
+        action="thanks.html"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        class="rsvp-form"
+      >
+        <input type="hidden" name="form-name" value="rsvp">
+        <p class="hidden-field">
+          <label>Don’t fill this out if you’re human:
+            <input name="bot-field" autocomplete="off">
+          </label>
+        </p>
+
+        <div class="form-field">
+          <label for="name">Guest name(s)</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            required
+            autocomplete="name"
+            placeholder="Full name"
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="attendance">Will you be joining us?</label>
+          <select name="attendance" id="attendance" required>
+            <option value="">Select an option</option>
+            <option value="yes">Happily accept</option>
+            <option value="no">Regretfully decline</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="dietary">Food restrictions (if any)</label>
+          <textarea
+            name="dietary"
+            id="dietary"
+            rows="3"
+            placeholder="e.g. nut allergy, vegetarian, vegan, or none"
+          ></textarea>
+        </div>
+
+        <button type="submit" class="wedding-btn rsvp-submit-btn">
+          Send RSVP
+        </button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

@@ -312,14 +312,10 @@ main {
   color: var(--wine);
 }
 
-.event-time {
-
-}
-
 .hero__preamble {
   animation: fade-up 0.42s ease-out 0.08s both;
 }
-.hero__ornament {
+.hero__ornament_main {
   animation: fade-up 0.42s ease-out 0.18s both;
 }
 .hero__names {
@@ -364,3 +360,137 @@ main {
 .details__section:nth-child(3) { animation-delay: 1.15s; }
 .details__section:nth-child(4) { animation-delay: 1.3s; }
 .details__section:nth-child(5) { animation-delay: 1.45s; }
+
+/* RSVP page */
+
+.rsvp-page {
+  max-width: 560px;
+  width: 100%;
+}
+
+.rsvp-nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.rsvp-back-link {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--sage);
+  padding: 0.4rem 0;
+  border-bottom: 1px solid rgba(105, 126, 95, 0.35);
+}
+
+.rsvp-back-link:focus-visible,
+.rsvp-back-link:hover {
+  color: var(--wine);
+  border-bottom-color: rgba(92, 39, 55, 0.6);
+}
+
+.rsvp-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.rsvp-title {
+  font-weight: 300;
+  font-size: 2.2rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--wine);
+  margin-top: 0.4rem;
+}
+
+.rsvp-form {
+  margin-top: 1.8rem;
+  text-align: left;
+  background-color: rgba(253, 248, 245, 0.8);
+  border-radius: 14px;
+  padding: 1.4rem 1.2rem 1.3rem;
+  box-shadow:
+    0 10px 35px rgba(42, 31, 31, 0.07),
+    0 2px 10px rgba(42, 31, 31, 0.04);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin-bottom: 1.1rem;
+}
+
+.form-field label {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--sage);
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  padding: 0.65rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid rgba(200, 150, 160, 0.6);
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--ink);
+  outline: none;
+  cursor: text;
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    background-color 0.18s ease;
+}
+
+.form-field select {
+  cursor: pointer;
+}
+
+.form-field input:focus-visible,
+.form-field select:focus-visible,
+.form-field textarea:focus-visible {
+  border-color: rgba(92, 39, 55, 0.8);
+  box-shadow: 0 0 0 1px rgba(92, 39, 55, 0.4);
+  background-color: #fff;
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.rsvp-submit-btn {
+  margin-top: 1.2rem;
+  width: 100%;
+  flex: none;
+  border-radius: 8px;
+  border: 1px solid var(--mauve);
+  font-family: 'Cormorant Garamond';
+  font-size: 1.1rem;
+}
+
+.hidden-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .rsvp-form {
+    padding: 1.6rem 1.6rem 1.4rem;
+  }
+
+  .rsvp-title {
+    font-size: 2.4rem;
+  }
+}
