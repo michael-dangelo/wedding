@@ -1,14 +1,6 @@
 @font-face {
   font-family: 'Cormorant Garamond';
-  src: url('fonts/CormorantGaramond-Light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Cormorant Garamond';
-  src: url('fonts/CormorantGaramond-LightItalic.ttf') format('truetype');
+  src: url('fonts/cormorant-garamond-300italic.woff2');
   font-weight: 300;
   font-style: italic;
   font-display: swap;
@@ -16,7 +8,7 @@
 
 @font-face {
   font-family: 'Cormorant Garamond';
-  src: url('fonts/CormorantGaramond-Regular.ttf') format('truetype');
+  src: url('fonts/cormorant-garamond-400.woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -24,7 +16,7 @@
 
 @font-face {
   font-family: 'Cormorant Garamond';
-  src: url('fonts/CormorantGaramond-Italic.ttf') format('truetype');
+  src: url('fonts/cormorant-garamond-400italic.woff2');
   font-weight: 400;
   font-style: italic;
   font-display: swap;
@@ -32,7 +24,7 @@
 
 @font-face {
   font-family: 'Cormorant Garamond';
-  src: url('fonts/CormorantGaramond-Medium.ttf') format('truetype');
+  src: url('fonts/cormorant-garamond-500.woff2');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -40,7 +32,15 @@
 
 @font-face {
   font-family: 'Cormorant Garamond';
-  src: url('fonts/CormorantGaramond-Bold.ttf') format('truetype');
+  src: url('fonts/cormorant-garamond-500italic.woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('fonts/cormorant-garamond-600.woff2');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -48,15 +48,7 @@
 
 @font-face {
   font-family: 'Jost';
-  src: url('fonts/Jost-Light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Jost';
-  src: url('fonts/Jost-Regular.ttf') format('truetype');
+  src: url('fonts/jost-v20-latin-400.woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
