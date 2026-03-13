@@ -77,16 +77,6 @@ main {
   width: 100%;
 }
 
-.hero-preamble {
-  font-family: 'Jost', sans-serif;
-  font-weight: 400;
-  font-size: 0.7rem;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: var(--sage);
-  margin: 1.4rem 0;
-}
-
 .hero-ornament {
   display: flex;
   align-items: center;
@@ -296,9 +286,6 @@ main {
   color: var(--wine);
 }
 
-.hero-preamble {
-  animation: fade-up 0.42s ease-out 0.08s both;
-}
 .hero-ornament-main {
   animation: fade-up 0.42s ease-out 0.18s both;
 }
