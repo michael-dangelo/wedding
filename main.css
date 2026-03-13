@@ -16,25 +16,9 @@
 
 @font-face {
   font-family: 'Cormorant Garamond';
-  src: url('fonts/cormorant-garamond-400italic.woff2');
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Cormorant Garamond';
   src: url('fonts/cormorant-garamond-500.woff2');
   font-weight: 500;
   font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Cormorant Garamond';
-  src: url('fonts/cormorant-garamond-500italic.woff2');
-  font-weight: 500;
-  font-style: italic;
   font-display: swap;
 }
 
@@ -89,73 +73,67 @@ main {
 }
 
 .hero {
-  text-align: center;
-  padding: 2rem 0 0;
   max-width: 560px;
   width: 100%;
 }
 
-.hero__preamble {
+.hero-preamble {
   font-family: 'Jost', sans-serif;
   font-weight: 400;
-  font-size: 0.65rem;
-  letter-spacing: 0.35em;
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--sage);
-  margin-bottom: 1.4rem;
+  margin: 1.4rem 0;
 }
 
-.hero__ornament {
+.hero-ornament {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0;
-  margin-bottom: 1.8rem;
   color: var(--wine);
+  margin-bottom: 1.8rem;
 }
 
-.hero__rule {
+.hero-rule {
+  max-width: 180px;
   display: flex;
   flex-direction: column;
   gap: 3px;
   flex: 1;
-  max-width: 110px;
 }
 
-.hero__rule span {
-  display: block;
+.hero-rule span {
   height: 1px;
   background: var(--wine);
   opacity: 0.5;
 }
 
-.hero__rule span:first-child { opacity: 0.25; }
+.hero-rule span:first-child { opacity: 0.25; }
 
-.hero__fleuron {
+.hero-fleuron {
   font-size: 1.1rem;
   margin: 0 1rem;
   color: var(--wine);
   opacity: 0.85;
-  line-height: 1;
 }
 
-.hero__names {
+.hero-names {
   font-weight: 400;
   font-size: 3.5rem;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   color: var(--wine);
   line-height: 1.05;
 }
 
-.hero__ampersand {
+.hero-ampersand {
   font-style: italic;
   font-weight: 300;
   color: var(--rose);
   font-size: 0.85em;
 }
 
-.hero__divider {
-  width: 60%;
+.hero-divider {
   max-width: 260px;
   height: 1px;
   margin: 2.6rem auto;
@@ -167,13 +145,13 @@ main {
   );
 }
 
-.hero__date {
+.hero-date {
   font-size: 1.6rem;
   color: var(--wine);
   letter-spacing: 0.11em;
 }
 
-.hero__location {
+.hero-location {
   font-size: 1.4rem;
   color: var(--wine);
   letter-spacing: 0.09em;
@@ -181,7 +159,7 @@ main {
   margin-top: 0.9rem;
 }
 
-.hero__location-subline {
+.hero-address {
   font-size: 0.95rem;
   color: var(--ink);
   letter-spacing: 0.08em;
@@ -256,7 +234,7 @@ main {
   margin-top: 2rem;
 }
 
-.details__heading {
+.details-heading {
   font-size: 1.2rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -318,27 +296,27 @@ main {
   color: var(--wine);
 }
 
-.hero__preamble {
+.hero-preamble {
   animation: fade-up 0.42s ease-out 0.08s both;
 }
-.hero__ornament_main {
+.hero-ornament-main {
   animation: fade-up 0.42s ease-out 0.18s both;
 }
-.hero__names {
+.hero-names {
   animation: fade-up 0.42s ease-out 0.28s both;
 }
-.hero__divider {
+.hero-divider {
   animation: fade-up 0.38s ease-out 0.38s both;
 }
-.hero__date {
+.hero-date {
   animation: fade-up 0.42s ease-out 0.5s both;
 }
 
-.hero__location {
+.hero-location {
   animation: fade-up 0.42s ease-out 0.58s both;
 }
 
-.hero__location-subline {
+.hero-address {
   animation: fade-up 0.42s ease-out 0.64s both;
 }
 
@@ -357,17 +335,12 @@ main {
   }
 }
 
-.details__section {
+.details-section {
   opacity: 0;
   animation: fade-up 0.42s ease-out both;
 }
-.details__section:nth-child(1) { animation-delay: 0.85s; }
-.details__section:nth-child(2) { animation-delay: 1s; }
-.details__section:nth-child(3) { animation-delay: 1.15s; }
-.details__section:nth-child(4) { animation-delay: 1.3s; }
-.details__section:nth-child(5) { animation-delay: 1.45s; }
-
-/* RSVP page */
+.details-section:nth-child(1) { animation-delay: 0.85s; }
+.details-section:nth-child(2) { animation-delay: 1s; }
 
 .rsvp-page {
   max-width: 560px;
@@ -375,9 +348,7 @@ main {
 }
 
 .rsvp-nav {
-  width: 100%;
   display: flex;
-  justify-content: flex-start;
   margin-bottom: 1.5rem;
 }
 
@@ -404,7 +375,7 @@ main {
 }
 
 .rsvp-title {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 2.2rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -468,11 +439,6 @@ main {
   background-color: #fff;
 }
 
-.form-field textarea {
-  resize: vertical;
-  min-height: 100px;
-}
-
 .rsvp-submit-btn {
   margin-top: 1.2rem;
   width: 100%;
@@ -490,14 +456,4 @@ main {
   width: 1px;
   height: 1px;
   overflow: hidden;
-}
-
-@media (min-width: 768px) {
-  .rsvp-form {
-    padding: 1.6rem 1.6rem 1.4rem;
-  }
-
-  .rsvp-title {
-    font-size: 2.4rem;
-  }
 }
