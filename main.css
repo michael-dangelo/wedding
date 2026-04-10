@@ -1,5 +1,13 @@
 @font-face {
   font-family: 'Cormorant Garamond';
+  src: url('fonts/cormorant-garamond-300italic.woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
   src: url('fonts/cormorant-garamond-400.woff2');
   font-weight: 400;
   font-style: normal;
@@ -102,7 +110,7 @@ main {
 
 .hero-ampersand {
   font-style: italic;
-  font-weight: 400;
+  font-weight: 300;
   color: var(--rose);
   font-size: 0.85em;
 }
