@@ -221,7 +221,6 @@ main {
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: 2rem;
 }
 
 .details-heading {
@@ -230,6 +229,7 @@ main {
   text-transform: uppercase;
   color: var(--sage);
   margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
 }
 
 .timeline {
@@ -251,11 +251,15 @@ main {
   z-index: 1;
 }
 
+.timeline > *:not(:last-child) {
+  margin-bottom: 1.7rem;
+}
+
 .event {
   position: relative;
   display: flex;
   align-items: flex-start;
-  margin: 0.8rem 0 1.7rem;
+  margin-top: 0.8rem;
 }
 
 .dot {
@@ -400,6 +404,7 @@ main {
 .form-field select,
 .form-field textarea {
   font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
   font-size: 1rem;
   padding: 0.65rem 0.8rem;
   border-radius: 8px;
