@@ -50,13 +50,14 @@
         </p>
 
         <div class="form-field">
-          <label for="name">Guest names</label>
+          <label for="name">Names of Guests</label>
           <textarea
             name="name"
             id="name"
             required
+            rows="3"
             autocomplete="off"
-            placeholder="Full names of all attending guests"
+            placeholder="Please provide the full names of everyone attending, including your guest and children"
           ></textarea>
         </div>
 
@@ -70,12 +71,22 @@
         </div>
 
         <div class="form-field">
-          <label for="dietary">Food restrictions (if any)</label>
+          <label for="dietary">(Optional) Food restrictions</label>
           <textarea
             name="dietary"
             id="dietary"
             rows="3"
             placeholder="e.g. nut allergy, vegetarian, vegan"
+          ></textarea>
+        </div>
+
+        <div class="form-field">
+          <label for="songs">(Optional) Song requests</label>
+          <textarea
+            name="songs"
+            id="songs"
+            rows="3"
+            placeholder="e.g. The Power of Love, Rasputin"
           ></textarea>
         </div>
 
