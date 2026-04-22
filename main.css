@@ -232,7 +232,7 @@ main {
 
 .timeline {
   position: relative;
-  padding-left: 40px;
+  /* padding-left: 40px; */
   display: inline-block;
   margin: 0 auto;
   text-align: left;
@@ -241,9 +241,9 @@ main {
 .timeline::before {
   content: '';
   position: absolute;
-  left: 43px;
+  left: 3px;
   top: 1.3rem;
-  bottom: 1.3rem;
+  bottom: 1.8rem;
   width: 1px;
   background-color: var(--mauve);
   z-index: 1;
@@ -468,14 +468,6 @@ main {
 
   .details-heading {
     margin-top: 2rem;
-  }
-
-  .timeline {
-    padding-left: 48px;
-  }
-
-  .timeline::before {
-    left: 51px;
   }
 
   .dot {
